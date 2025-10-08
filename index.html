@@ -17,7 +17,7 @@
       <a class="navbar-brand" href="#intro">
         <span class="text-secondary fw-bold">
             <i class="bi bi-book-half"></i>
-          Net-Ninja pro - the Book
+          Net-Ninja pro - The Book
         </span>
       </a>
        <!-- toggle button for mobile nav -->
@@ -59,9 +59,16 @@
           </h1>
           <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dignissimos?</p>
           <a href="#pricing" class="btn btn-secondary btn-lg">Osta nüüd</a>
+           <!-- open sidebar / offcanvas -->
+          <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">
+            Vaata minu teisi raamatuid
+            </a>
         </div>
         <div class="col-md-5 text-center d-none d-md-block">
-          <img src="img/raamat.png" class="img-fluid" alt="raamat">
+            <!--tooltip-->
+            <span class="tt" data-bs-placement="bottom" title="Net-Ninja pro - the Book">
+              <img src="img/raamat.png" class="img-fluid" alt="Raamatu pilt">  
+            </span>
         </div>
       </div>
     </div>
@@ -284,10 +291,138 @@
   </section>
 
   <!-- contact form -->
+    <!-- contact form -->
+  <!-- form-control, form-label, form-select, input-group, input-group-text -->
+  <section id="contact">
+    <div class="container-lg">
+      
+      <div class="text-center">
+        <h2>Kontaktid</h2>
+        <p class="lead"><i class="bi bi-question-circle"></i> Kas tahad midagi küsida? Täida vajalikud vormid ja võtke minuga otse ühendust</p>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+          
+          <form>
+            <label for="email" class="form-label">Email aadress:</label>
+            <div class="input-group mb-4">
+              <span class="input-group-text">
+                <i class="bi bi-envelope-fill text-secondary"></i>
+              </span>
+              <input type="text" id="email" class="form-control" placeholder="e.g. mario@example.com" />
+              <!--tooltip-->
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Sisesta aadress, et me saaksime võtta ühendust.">
+                <i class="bi bi-question-circle text-muted"></i>
+                </span>
+                </span>
+            </div>
+            <label for="name" class="form-label">Nimi:</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-person-fill text-secondary"></i>
+              </span>
+              <input type="text" id="name" class="form-control" placeholder="e.g. Mario" />
+              <!--tooltip-->
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Sinu Nimi.">
+                <i class="bi bi-question-circle text-muted"></i>
+                </span>
+                </span>
+            </div>
+            <label for="subject" class="form-label">Mida sa soovid küsida?</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-chat-right-dots-fill text-secondary"></i>
+              </span>
+              <select class="form-select" id="subject">
+                <option value="pricing" selected>Hinna päring</option>
+                <option value="content">Sisu päring</option>
+                <option value="other">Muu päring</option>
+              </select>
+            </div>
+            <div class="mb-4 mt-5 form-floating">
+              <textarea class="form-control" id="query" style="height: 140px" placeholder="query"></textarea>
+              <label for="query">Sinu päring...</label>
+            </div>
+            <div class="mb-4 text-center">
+              <button type="submit" class="btn btn-secondary">Sisesta</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
   <!-- get updates / modal trigger -->
+   <section class="bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h2>Ole samal lainel meiega</h2>
+        <p class="lead">Saa kõige uuemad versioonid meilt...</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="text-muted my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero exercitationem voluptatibus porro, hic asperiores fuga illo voluptates obcaecati deleniti veritatis sunt saepe quasi deserunt ex ipsum. Est possimus, aspernatur, vitae eligendi rem odit quaerat, ipsum pariatur ratione maxime delectus fuga minus accusamus dolores iusto maiores accusantium cumque magnam placeat quia!</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
+            Registeeri uuenduste saamiseks
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- modal itself -->
+  <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title">Saa kõige hiljutisem uuendus.</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, exercitationem laboriosam nihil minus voluptatibus harum aliquam consequatur pariatur inventore dignissimos illum excepturi ratione ipsum sit iusto alias eligendi fugit laborum?</p>
+          <label for="modal-email" class="form-label">Sinu E-maili aadress:</label>
+          <input type="text" class="form-control" id="modal-email" placeholder="e.g. mario@example.com">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Sisesta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- side panel / offcanvas -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebar-label">Teised raamatud</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In minima ducimus excepturi quasi tempore fugit quis voluptatibus aut error possimus, tenetur natus magni quam voluptatem quae eligendi repudiandae delectus eaque!</p>
+        <!-- dropdown -->
+      <div class="dropdown mt-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="book-dropdown" data-bs-toggle="dropdown">
+          Vali raamatu nimi
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+          <li><a class="dropdown-item" href="#">Become a React Superhero</a></li>
+          <li><a class="dropdown-item" href="#">Conquering Vue.js</a></li>
+          <li><a class="dropdown-item" href="#">Levelling up Your Next.js</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+    <script>
+      const tooltips = document.querySelectorAll('.tt');
+      tooltips.forEach(t => {
+        new bootstrap.Tooltip(t);
+      });
+    </script>
 </body>
 </html>
